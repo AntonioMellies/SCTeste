@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "26f4ff90-7169-41e2-9772-e84cea5ef6f7",
+		"name": "SCTeste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"user1\",\n\t\"password\":\"senha\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Protected",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTEzMDY5NDgsIm5iZiI6MTU1MTMwNjk0OCwianRpIjoiZDdiYzkzNjItYWI2ZS00NzY2LTlkOWItZjBlOWVmNjY0MmMyIiwiZXhwIjoxNTUxMzIxMzQ4LCJpZGVudGl0eSI6InVzZXIxIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.UdFcbmNm5DPKs_wP9Xghfy5jSvoxFD19yeaEx_FPQRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/protected",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "System A - consultadividacpf",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTE4MTk3NTcsIm5iZiI6MTU1MTgxOTc1NywianRpIjoiYzVjZGMxYjYtMzgyYS00MDUzLTgyNjctYWU2ZmM1NTlkMDhiIiwiZXhwIjoxNTUxODM0MTU3LCJpZGVudGl0eSI6InVzZXIxIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.gDPlB4tFx02al9lr8PQp9queo9umzj7b_ZBZPbFOW1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\":89147787465\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/systema/consultadividacpf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"systema",
+						"consultadividacpf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "System B - scorecreditocpf",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTE4MTk3NTcsIm5iZiI6MTU1MTgxOTc1NywianRpIjoiYzVjZGMxYjYtMzgyYS00MDUzLTgyNjctYWU2ZmM1NTlkMDhiIiwiZXhwIjoxNTUxODM0MTU3LCJpZGVudGl0eSI6InVzZXIxIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.gDPlB4tFx02al9lr8PQp9queo9umzj7b_ZBZPbFOW1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\":\"19855318528\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/systemb/scorecreditocpf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"systemb",
+						"scorecreditocpf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "System C - eventoscpf",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\":\"28643370029\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/systemc/eventoscpf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"systemc",
+						"eventoscpf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

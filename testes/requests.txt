@@ -1,0 +1,20 @@
+#Login
+http://%endereço da API%/auth/login
+{
+"username":%usuario%,
+"password":%senha%}
+
+#SystemA
+http://%endereço da API%/systema/consultadividacpf
+{
+"cpf":%numero do CPF%}
+
+#SystemB
+http://%endereço da API%/systemb/scorecreditocpf
+{
+"cpf":%numero do CPF%}
+
+#SystemC
+http://%endereço da API%/systemc/eventoscpf
+{
+"cpf":%numero do CPF%}
